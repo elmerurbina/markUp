@@ -1,0 +1,282 @@
+/* styles.css */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #6dd5fa, #2980b9);
+    color: #333;
+}
+
+header {
+    background-color: rgba(0, 123, 255, 0.8);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #007bff;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: white;
+    position: relative;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+li:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+h3 {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    margin: -20px -20px 10px -20px;
+}
+
+p {
+    padding: 0 10px 10px 10px;
+    margin: 0;
+}
+
+/* Palm tree animation for Whitehaven Beach */
+@keyframes sway {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.whitehaven::before {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 20px;
+    height: 60px;
+    background-color: #8B4513; /* brown trunk */
+    border-radius: 3px;
+    transform-origin: bottom;
+    animation: sway 3s infinite ease-in-out;
+}
+
+.whitehaven::after {
+    content: '';
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #228B22; /* green leaves */
+}
+
+/* Cloud animation for Grace Bay */
+@keyframes float {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(20px); }
+    100% { transform: translateX(0); }
+}
+
+.grace-bay::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 20px;
+    background-color: #FFF;
+    border-radius: 20px;
+    animation: float 6s infinite ease-in-out;
+}
+
+/* Cliff animation for Baia do Sancho */
+@keyframes wave {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(0); }
+}
+
+.baia-do-sancho::before {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 30px;
+    height: 20px;
+    background-color: #8B4513; /* brown cliff */
+    border-radius: 3px;
+    animation: wave 4s infinite ease-in-out;
+}
+
+/* Shipwreck animation for Navagio Beach */
+@keyframes bob {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+.navagio::before {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 30px;
+    height: 15px;
+    background-color: #A52A2A; /* rust color */
+    border-radius: 3px;
+    transform: rotate(-10deg);
+    animation: bob 3s infinite ease-in-out;
+}
+
+/* Ruins animation for Playa Paraiso */
+@keyframes rise {
+    0% { transform: translateY(10px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.playa-paraiso::before {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: #D2B48C; /* sand color */
+    border-radius: 3px;
+    animation: rise 2s infinite ease-in-out;
+}
+
+/* Boulders animation for Anse Source d'Argent */
+@keyframes rock {
+    0% { transform: rotate(0); }
+    50% { transform: rotate(10deg); }
+    100% { transform: rotate(0); }
+}
+
+.anse-source::before {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 30px;
+    height: 20px;
+    background-color: #708090; /* grey rock */
+    border-radius: 3px;
+    animation: rock 3s infinite ease-in-out;
+}
+
+/* Waves animation for Seven Mile Beach */
+@keyframes roll {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.seven-mile::before {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 40px;
+    height: 20px;
+    background-color: #00BFFF; /* blue water */
+    border-radius: 10px;
+    animation: roll 2s infinite ease-in-out;
+}
+
+/* Bungalows animation for Bora Bora */
+@keyframes float-up {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.bora-bora::before {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: #8B4513; /* brown bungalow */
+    border-radius: 3px;
+    animation: float-up 3s infinite ease-in-out;
+}
+
+/* Islands animation for Lanikai Beach */
+@keyframes drift {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+
+.lanikai::before {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 30px;
+    height: 15px;
+    background-color: #228B22; /* green island */
+    border-radius: 3px;
+    animation: drift 4s infinite ease-in-out;
+}
+
+/* Pink sand animation for Pink Sands Beach */
+@keyframes shimmer {
+    0% { background-color: #FF69B4; }
+    50% { background-color: #FFB6C1; }
+    100% { background-color: #FF69B4; }
+}
+
+.pink-sands::before {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 40px;
+    height: 20px;
+    background-color: #FF69B4; /* pink sand */
+    border-radius: 10px;
+    animation: shimmer 2s infinite ease-in-out;
+}
